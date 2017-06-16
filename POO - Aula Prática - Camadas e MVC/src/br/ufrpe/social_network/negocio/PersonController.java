@@ -20,19 +20,31 @@ public class PersonController {
     }
     
     public void savePerson(Person p) {
-        // TODO Método que salva pessoa no repositório
+        // ok Método que salva pessoa no repositório
+    	if(p != null){
+    		personsRepository.cadastrar(p);
+    	}
     }
     
     public Person find(long personId) {
-        // TODO Retorna o objeto do tipo Person que contenha aquele ID
-        return null;
+        // ok Retorna o objeto do tipo Person que contenha aquele ID
+    	
+        return personsRepository.procurar(personId);
     }
     
     public void update(Person newPerson) {
-        //TODO Encontra no repositório obj que tenha id igual a newPerson.id e atualiza objeto 
+        //ok Encontra no repositório obj que tenha id igual a newPerson.id e atualiza objeto
+    	
+    	if(newPerson != null){
+    		personsRepository.cadastrar(newPerson);
+    	}
     }
     
     public void delete(Person p) {
-        // TODO apaga do repositório objeto que contenha o id igual a p.id 
+        // ok apaga do repositório objeto que contenha o id igual a p.id 
+    	
+    	if(p != null){
+    		personsRepository.cadastrar(p);
+    	}
     }
 }

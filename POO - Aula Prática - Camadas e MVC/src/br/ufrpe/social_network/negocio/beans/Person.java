@@ -77,7 +77,9 @@ public class Person {
     @Override
     public String toString() {
         // ok Implementar método toString da classe Person
-        return "Nome: " + name + "\nID: " + id + "\nPaís: " + country
-        		+ "\nData de Nascimento: " + birthDate;
+    	String texto = "";
+        texto = String.format("Nome: %s\nID: %d\nPaís: %s\nData de Nascimento: ");
+        texto += birthDate;
+        return texto;
     }
 }
