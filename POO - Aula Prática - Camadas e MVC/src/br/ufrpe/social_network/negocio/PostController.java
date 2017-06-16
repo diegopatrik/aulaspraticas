@@ -1,16 +1,62 @@
 package br.ufrpe.social_network.negocio;
 
+import java.util.ArrayList;
+
 import br.ufrpe.social_network.dao.PostDAO;
+import br.ufrpe.social_network.negocio.beans.Person;
+import br.ufrpe.social_network.negocio.beans.Post;
 
 public class PostController {
     
     private PostDAO postsRepository;
+    private static PostController instance;
     
-    // TODO implementar corpo dos métodos CRUD deste controlador
+    // ok implementar corpo dos métodos CRUD deste controlador
+    
+    public void posta(Post p) {
+        
+    	if(p != null){
+    		postsRepository.postar(p);
+    	}
+    }
+    
+    public Post procurar(long personId) {
+        
+        return postsRepository.procurar(personId);
+    }
+    
+    public void update(Post newPerson) {
+        
+    	if(newPerson != null){
+    		postsRepository.atualizar(newPerson);
+    	}
+    }
+    
+    public void delete(Post p) {
+      
+    	if(p != null){
+    		postsRepository.remover(p);
+    	}
+    }
 
-    // TODO Implementar singleton para este controlador
+    // ok Implementar singleton para este controlador
     
-    // TODO Implementar método que lista todos os posts de uma determinada pessoa
+    public static PostController getInstance(){
+    	if(instance == null){
+    		instance = new PostController();
+    	}
+    	
+    	return instance;
+    }
+    
+    
+    // ok Implementar método que lista todos os posts de uma determinada pessoa
+    
+    public ArrayList<Post> listar(Person p){
+    	
+    	return postsRepository.listar(p);
+    	
+    }
     
     // TODO DESAFIO Implementar método que busque todos comentários que uma dada pessoa realizou em posts de terceiros
     // Para implementar este método, você deve fazer uma buscar em todos os 
