@@ -36,7 +36,7 @@ public class PersonController {
         //ok Encontra no repositório obj que tenha id igual a newPerson.id e atualiza objeto
     	
     	if(newPerson != null){
-    		personsRepository.cadastrar(newPerson);
+    		personsRepository.atualizar(newPerson);
     	}
     }
     
@@ -44,7 +44,7 @@ public class PersonController {
         // ok apaga do repositório objeto que contenha o id igual a p.id 
     	
     	if(p != null){
-    		personsRepository.cadastrar(p);
+    		personsRepository.remover(p);
     	}
     }
 }
