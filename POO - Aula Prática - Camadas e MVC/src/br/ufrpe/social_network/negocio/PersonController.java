@@ -40,7 +40,7 @@ public class PersonController {
     	}
     }
     
-    public void delete(Person p) {
+    public void deletePerson(Person p) {
         // ok apaga do repositório objeto que contenha o id igual a p.id 
     	
     	if(p != null){

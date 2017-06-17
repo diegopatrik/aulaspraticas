@@ -20,19 +20,19 @@ public class PostController {
     	}
     }
     
-    public Post procurar(long personId) {
+    public Post procurar(long postId) {
         
-        return postsRepository.procurar(personId);
+        return postsRepository.procurar(postId);
     }
     
-    public void update(Post newPerson) {
+    public void update(Post newPost) {
         
-    	if(newPerson != null){
-    		postsRepository.atualizar(newPerson);
+    	if(newPost != null){
+    		postsRepository.atualizar(newPost);
     	}
     }
     
-    public void delete(Post p) {
+    public void deletePost(Post p) {
       
     	if(p != null){
     		postsRepository.remover(p);
