@@ -2,6 +2,7 @@ package br.ufrpe.social_network.gui;
 
 import java.time.LocalDate;
 
+import br.ufrpe.social_network.dao.PersonDAO;
 import br.ufrpe.social_network.negocio.Fachada;
 import br.ufrpe.social_network.negocio.beans.Person;
 import br.ufrpe.social_network.negocio.beans.Post;
@@ -35,8 +36,8 @@ public class TextualUserInterface {
 
     	redesocial.salvaPessoa(p);
     	redesocial.salvaPessoa(p2);
-    	//redesocial.salvaPessoa(new Person("Lucas","EUA",LocalDate.of(1997, 02, 15)));
-    	//redesocial.salvaPessoa(new Person("Arthur","Brasil",LocalDate.of(2016, 06, 16)));
+    	redesocial.salvaPessoa(new Person("Lucas","EUA",LocalDate.of(1997, 02, 15)));
+    	redesocial.salvaPessoa(new Person("Arthur","Brasil",LocalDate.of(2016, 06, 16)));
     	
     	redesocial.apagarPessoa(p);
     	
